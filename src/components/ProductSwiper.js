@@ -21,7 +21,7 @@ function ProductSwiper({ products, handleToolTip, showToolTip }) {
       style={{ width: '800px' }}
     >
       {products?.map((el, idx) => (
-        <SwiperSlide key={el.productId}>
+        <SwiperSlide key={idx}>
           <ProductList>
             <div
               value={idx}

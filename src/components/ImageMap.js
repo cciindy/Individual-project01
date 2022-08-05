@@ -60,14 +60,18 @@ function ImageMap() {
                         <>
                           <ProductPrice>
                             <DiscountRate>{el.discountRate}%</DiscountRate>
-                            {el.priceDiscount}
+                            {el.priceDiscount
+                              .toString()
+                              .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')}
                           </ProductPrice>
                         </>
                       ) : (
                         <>
                           <ProductPrice>
                             {el.outside && <Outside>예상가</Outside>}
-                            {el.priceOriginal}
+                            {el.priceOriginal
+                              .toString()
+                              .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')}
                           </ProductPrice>
                         </>
                       )}
