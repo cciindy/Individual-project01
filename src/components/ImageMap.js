@@ -62,7 +62,7 @@ function ImageMap() {
                             <DiscountRate>{el.discountRate}%</DiscountRate>
                             {el.priceDiscount
                               .toString()
-                              .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')}
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                           </ProductPrice>
                         </>
                       ) : (
@@ -71,7 +71,7 @@ function ImageMap() {
                             {el.outside && <Outside>예상가</Outside>}
                             {el.priceOriginal
                               .toString()
-                              .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')}
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                           </ProductPrice>
                         </>
                       )}
