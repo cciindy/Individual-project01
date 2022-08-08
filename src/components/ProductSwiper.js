@@ -4,10 +4,11 @@ import { Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
+import { customMedia } from '../styles/GlobalStyle';
 
 function ProductSwiper({ products, handleToolTip, showToolTip }) {
   return (
-    <Swiper
+    <StyleSwiper
       spaceBetween={0}
       slidesPerView={6}
       onSlideChange={() => console.log('slide change')}
@@ -18,7 +19,6 @@ function ProductSwiper({ products, handleToolTip, showToolTip }) {
       }}
       modules={[Scrollbar]}
       className="mySwiper"
-      style={{ width: '800px' }}
     >
       {products?.map((el, idx) => (
         <SwiperSlide key={idx}>
@@ -34,11 +34,16 @@ function ProductSwiper({ products, handleToolTip, showToolTip }) {
           </ProductList>
         </SwiperSlide>
       ))}
-    </Swiper>
+    </StyleSwiper>
   );
 }
 
 export default ProductSwiper;
+
+const StyleSwiper = styled(Swiper)`
+  position: relative;
+  width: 800px;
+`;
 const ProductList = styled.div`
   position: relative;
   cursor: pointer;

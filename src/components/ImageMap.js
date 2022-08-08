@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import ProductSwiper from './ProductSwiper';
+import { customMedia } from '../styles/GlobalStyle';
 
 function ImageMap() {
   const [data, setData] = useState([]);
@@ -52,7 +53,7 @@ function ImageMap() {
                     src="https://cdn.ggumim.co.kr/storage/20211029145330GwwumnWNSs.png"
                     alt="closeIcon"
                   />
-                  <ToolTipBox>
+                  <ToolTipBox pointX={el.pointY}>
                     <img src={el.imageUrl} alt="productImg" />
                     <Desc>
                       <ProductName>{el.productName}</ProductName>
@@ -103,6 +104,9 @@ const Container = styled.div`
   width: 800px;
   padding: 40px 0;
   margin: 0 auto;
+  ${customMedia.lessThan('mobile')`
+		width: 100%;
+	`}
 `;
 const Image = styled.img`
   position: relative;
@@ -115,6 +119,10 @@ const Tag = styled.div`
   height: 40px;
   top: ${props => props.pointX * 1.6}px;
   left: ${props => props.pointY * 1.6}px;
+  ${customMedia.lessThan('mobile')`
+    top: ${props => props.pointX * 1.2}px;
+    left: ${props => props.pointY * 1.2}px;
+	`}
 `;
 const TagIcon = styled.button``;
 const CloseIcon = styled.button``;
