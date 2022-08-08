@@ -8,9 +8,10 @@ ${reset}
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+body {
   font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', 'sans-serif';
 }
-
 img {
   max-width: 100%;
   max-height: 100%;
