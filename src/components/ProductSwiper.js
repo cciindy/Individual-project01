@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
-import { customMedia } from '../styles/GlobalStyle';
 
 function ProductSwiper({ products, handleToolTip, showToolTip }) {
   return (
@@ -55,12 +53,11 @@ const ProductList = styled.div`
     width: fit-content;
     height: fit-content;
     border: 0.5px solid white;
-    :active {
-      background: linear-gradient(163.54deg, #ff659e 8.22%, #f56b30 94.1%);
-      margin: 28px 15px;
-      padding: 3px 3px 0;
-      border-radius: 18px;
-    }
+  }
+  .active {
+    background: linear-gradient(163.54deg, #ff659e 8.22%, #f56b30 94.1%);
+    padding: 3px 3px 0;
+    border-radius: 18px;
   }
 
   img {
@@ -73,7 +70,7 @@ const ProductList = styled.div`
   span {
     position: absolute;
     top: 0;
-    right: 5px;
+    right: 8px;
     width: 24px;
     height: 28px;
     background-image: url(//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png);
@@ -83,6 +80,5 @@ const ProductList = styled.div`
     line-height: 25px;
     color: white;
     text-align: center;
-    padding-left: 1px;
   }
 `;
