@@ -44,6 +44,10 @@
 
 <br>
 
+## 개발 기능 시연
+![Aug-09-2022 20-42-49](https://user-images.githubusercontent.com/104499132/183640009-c5f1f0af-ff30-47af-8ebb-508902ff160f.gif)
+
+
 ## 💻 Technlogies
 
 <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"> <img src="https://img.shields.io/badge/Styledcomponents-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"> 
